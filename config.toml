@@ -1,0 +1,88 @@
+baseURL = "https://<user>.github.io/"
+title = "Ellie Heidari — Embedded Software"
+languageCode = "en"
+theme = "PaperMod"
+[pagination]
+pagerSize = 10
+enableRobotsTXT = true
+
+[minify]
+  disableXML = true
+
+[outputs]
+  home = ["HTML","RSS","JSON"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  noClasses = false
+  lineNos = true
+  guessSyntax = true
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowShareButtons = false
+  showtoc = true
+  tocopen = false
+  env = "production"
+  author = "Ellie Heidari"
+  description = "Firmware • Drivers • RTOS • Bootloaders • Test"
+  keywords = ["Embedded","Firmware","AVR","STM32","RTOS","Bootloader"]
+  images = ["images/og.png"]
+
+[params.profileMode]
+  enabled = true
+  title = "Ellie Heidari"
+  subtitle = "Embedded Software Engineer"
+  imageUrl = "images/avatar.jpg"
+  imageTitle = "avatar"
+  imageWidth = 160
+  imageHeight = 160
+
+[[params.profileMode.buttons]]
+  name = "Projects"
+  url  = "/projects/"
+
+[[params.profileMode.buttons]]
+  name = "Articles"
+  url  = "/posts/"
+
+[[params.profileMode.buttons]]
+  name = "CV"
+  url  = "/cv/"
+
+[[params.socialIcons]]
+  name = "github"
+  url  = "https://github.com/<user>"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url  = "https://www.linkedin.com/in/<handle>/"
+
+[[params.socialIcons]]
+  name = "email"
+  url  = "mailto:<you>@<domain>"
+
+[menu]
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Articles"
+    url = "/posts/"
+    weight = 20
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 30
+
+  [[menu.main]]
+    name = "CV"
+    url = "/cv/"
+    weight = 40
