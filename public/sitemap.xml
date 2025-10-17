@@ -2,43 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/portfolio/categories/</loc>
+    <loc>https://ellie-heidari.github.io/portfolio/categories/</loc>
     <lastmod>2025-10-17T20:25:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/</loc>
+    <loc>https://ellie-heidari.github.io/portfolio/</loc>
     <lastmod>2025-10-17T20:25:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/tags/embedded/</loc>
+    <loc>https://ellie-heidari.github.io/portfolio/tags/embedded/</loc>
     <lastmod>2025-10-17T20:25:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/tags/firmware/</loc>
+    <loc>https://ellie-heidari.github.io/portfolio/tags/firmware/</loc>
     <lastmod>2025-10-17T20:25:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/categories/projects/</loc>
+    <loc>https://ellie-heidari.github.io/portfolio/categories/projects/</loc>
     <lastmod>2025-10-17T20:25:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/projects/</loc>
+    <loc>https://ellie-heidari.github.io/portfolio/projects/</loc>
     <lastmod>2025-10-17T20:25:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/tags/</loc>
+    <loc>https://ellie-heidari.github.io/portfolio/tags/</loc>
     <lastmod>2025-10-17T20:25:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/projects/uart-firmware-uploader/</loc>
+    <loc>https://ellie-heidari.github.io/portfolio/projects/uart-firmware-uploader/</loc>
     <lastmod>2025-10-17T20:25:59+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/about/</loc>
-    <lastmod>2025-10-17T20:25:43+02:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/categories/articles/</loc>
+    <loc>https://ellie-heidari.github.io/portfolio/posts/</loc>
     <lastmod>2025-10-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/posts/welcome/</loc>
-    <lastmod>2025-10-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/tags/meta/</loc>
-    <lastmod>2025-10-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/portfolio/posts/</loc>
-    <lastmod>2025-10-15T00:00:00+00:00</lastmod>
+    <loc>https://ellie-heidari.github.io/portfolio/cv/</loc>
   </url>
 </urlset>

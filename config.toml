@@ -44,15 +44,15 @@ enableRobotsTXT = true
 
 [[params.profileMode.buttons]]
   name = "Projects"
-  url  = "/projects/"
+  url  = "projects/"
 
 [[params.profileMode.buttons]]
   name = "Articles"
-  url  = "/posts/"
+  url  = "posts/"
 
 [[params.profileMode.buttons]]
   name = "CV"
-  url  = "/cv/"
+  url  = "cv/"
 
 [[params.socialIcons]]
   name = "github"
@@ -69,20 +69,20 @@ enableRobotsTXT = true
 [menu]
   [[menu.main]]
     name = "Projects"
-    url = "/projects/"
+    url = "projects/"
     weight = 10
 
   [[menu.main]]
     name = "Articles"
-    url = "/posts/"
+    url = "posts/"
     weight = 20
 
   [[menu.main]]
     name = "About"
-    url = "/about/"
+    url = "about/"
     weight = 30
 
   [[menu.main]]
     name = "CV"
-    url = "/cv/"
+    url = "cv/"
     weight = 40
