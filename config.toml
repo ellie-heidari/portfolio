@@ -1,5 +1,5 @@
 baseURL = "https://ellie-heidari.github.io/portfolio/"
-title = "Ellie Heidari — Embedded Software"
+title = "Ellie Heidari — Embedded Developer"
 languageCode = "en"
 theme = "PaperMod"
 [pagination]
@@ -36,9 +36,9 @@ enableRobotsTXT = true
 [params.profileMode]
   enabled = true
   title = "Ellie Heidari"
-  subtitle = "Embedded Software Engineer"
+  subtitle = "Embedded Developer"
   imageUrl = "images/avatar.jpg"
-  imageTitle = "avatar"
+  imageTitle = "Under Construction"
   imageWidth = 160
   imageHeight = 160
 
