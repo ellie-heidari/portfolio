@@ -86,3 +86,4 @@ enableRobotsTXT = true
     name = "CV"
     url = "cv/"
     weight = 40
+canonifyURLs = true
