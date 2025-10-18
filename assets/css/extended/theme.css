@@ -53,37 +53,92 @@ Seed colors (brand):
   --code-chip-bg: #ecf4fb;
 }
 
-/* Dark theme — corrected */
-:root.dark {
-  /* Surfaces (dark → lighter) */
+/* ── Dark theme override: works for .dark, html.dark, body.dark, [data-theme="dark"] ── */
+:root.dark,
+html.dark,
+body.dark,
+:root[data-theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  /* Surfaces */
   --bg-950: #040a14;
-  --bg-900: #060f1d;   /* site background */
+  --bg-900: #06101d;   /* site background */
   --bg-850: #0a1626;   /* code/page plate */
   --bg-800: #0d1c30;   /* raised cards */
 
   /* Text */
   --ink-50:  #e8f2fb;  /* main text */
   --ink-100: #d4e6f6;  /* code text */
-  --ink-300: #aac7e3;  /* muted text */
+  --ink-300: #aac7e3;  /* muted */
 
-  /* Brand (Speckled Eggs tuned for dark) */
+  /* Brand tuned for dark (from Speckled Eggs) */
   --brand-900: #60A3D9; /* primary accent */
   --brand-700: #7cb6e1; /* hover/active */
   --brand-500: #BFD7ED; /* subtle lines/badges */
 
-  /* PaperMod token mapping */
-  --theme:      var(--ink-50);   /* main text */
-  --entry:      var(--bg-900);   /* card/page background */
+  /* PaperMod tokens */
+  --theme:      var(--ink-50);   /* text color */
+  --entry:      var(--bg-900);   /* card/page bg */
   --primary:    var(--brand-900);
-  --secondary:  var(--ink-300);  /* muted text */
-  --tertiary:   #16324a;         /* borders/dividers */
+  --secondary:  var(--ink-300);
+  --tertiary:   #16324a;         /* borders */
   --content:    var(--ink-50);
-  --hljs-bg:    var(--bg-850);   /* code block background */
+  --hljs-bg:    var(--bg-850);
   --code-text:  var(--ink-100);
   --code-chip-bg: #0e2238;
-
   --focus-ring: var(--brand-900);
 }
+
+/* Force key surfaces to use the same background across all templates */
+html.dark body,
+body.dark,
+:root.dark body,
+:root[data-theme="dark"] body,
+html[data-theme="dark"] body,
+body[data-theme="dark"] {
+  background: var(--bg-900) !important;
+}
+
+/* Cards, pages, lists */
+html.dark .post-entry,
+html.dark .page,
+html.dark .archive-post,
+body.dark .post-entry,
+body.dark .page,
+body.dark .archive-post,
+:root.dark .post-entry,
+:root.dark .page,
+:root.dark .archive-post,
+:root[data-theme="dark"] .post-entry,
+:root[data-theme="dark"] .page,
+:root[data-theme="dark"] .archive-post {
+  background: var(--entry) !important;
+  border-color: var(--tertiary) !important;
+}
+
+/* Code blocks */
+html.dark .post-content pre,
+body.dark .post-content pre,
+:root.dark .post-content pre,
+:root[data-theme="dark"] .post-content pre {
+  background: var(--hljs-bg) !important;
+  color: var(--code-text) !important;
+}
+
+/* Links */
+html.dark .post-content a,
+body.dark .post-content a,
+:root.dark .post-content a,
+:root[data-theme="dark"] .post-content a {
+  color: var(--primary) !important;
+}
+html.dark .post-content a:hover,
+body.dark .post-content a:hover,
+:root.dark .post-content a:hover,
+:root[data-theme="dark"] .post-content a:hover {
+  color: var(--brand-700) !important;
+}
+
 
 /* Application (shared) */
 html, body { font-family: var(--font-sans); }
