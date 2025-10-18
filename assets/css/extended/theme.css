@@ -1,79 +1,140 @@
-/* --- Speckled Eggs: LIGHT THEME CONSISTENCY PATCH --- */
+/* ── Speckled Eggs — unified theming (light + dark) ───────────────────────── */
 
-/* Base tokens (light) */
+/* LIGHT (kept as you approved) */
 :root{
+  --font-sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+
   /* brand */
   --brand-900:#003B73; /* Navy */
   --brand-700:#0074B7; /* Royal */
   --brand-500:#60A3D9; /* Grotto */
   --brand-300:#BFD7ED; /* Baby */
+
   /* neutrals */
-  --bg-50:#ffffff;     /* site/page background */
+  --bg-50:#ffffff;     /* site/page bg */
   --bg-100:#f7fbff;    /* code/list plate */
   --bg-200:#edf5fb;
   --bg-300:#e3eef6;    /* borders */
+
   /* text */
   --ink-900:#0f2437;
   --ink-600:#2a4056;
   --ink-500:#4e6a86;
 
   /* PaperMod tokens */
-  --theme:var(--ink-900);     /* text color */
-  --entry:var(--bg-50);       /* card/page card bg */
-  --primary:var(--brand-700); /* links */
-  --secondary:var(--ink-500); /* muted text */
-  --tertiary:var(--bg-300);   /* borders */
-  --content:var(--ink-900);   /* body text */
-  --hljs-bg:var(--bg-100);    /* code block bg */
+  --theme:var(--ink-900);
+  --entry:var(--bg-50);
+  --primary:var(--brand-700);
+  --secondary:var(--ink-500);
+  --tertiary:var(--bg-300);
+  --content:var(--ink-900);
+  --hljs-bg:var(--bg-100);
   --code-text:var(--ink-900);
   --code-chip-bg:#ecf4fb;
+
+  --focus-ring:var(--brand-700);
 }
 
-/* Enforce identical surfaces on all light pages (list & single) */
-html:not(.dark) body,
-html:not([data-theme="dark"]) body {
-  background: var(--bg-50) !important;
-  color: var(--theme) !important;
+/* DARK VARIABLES — applied whether theme is class-based or media-query based */
+:root.dark,
+html.dark,
+body.dark,
+:root[data-theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"]{
+  /* dark neutrals */
+  --bg-950:#050b15;
+  --bg-900:#081120;   /* site background */
+  --bg-850:#0b1a2e;   /* code/page plate */
+  --bg-800:#0e223b;   /* raised cards */
+
+  /* text */
+  --ink-50:#e8f2fb;   /* main text */
+  --ink-100:#d4e6f6;  /* code text */
+  --ink-300:#aac7e3;  /* muted */
+
+  /* brand tuned for dark (Speckled chain) */
+  --brand-900:#60A3D9;  /* primary */
+  --brand-700:#7cb6e1;  /* hover */
+  --brand-500:#BFD7ED;  /* subtle lines */
+
+  /* tokens */
+  --theme:var(--ink-50);
+  --entry:var(--bg-900);
+  --primary:var(--brand-900);
+  --secondary:var(--ink-300);
+  --tertiary:#16324a;
+  --content:var(--ink-50);
+  --hljs-bg:var(--bg-850);
+  --code-text:var(--ink-100);
+  --code-chip-bg:#0e2238;
+
+  --focus-ring:var(--brand-900);
 }
 
-html:not(.dark) .post-entry,
-html:not([data-theme="dark"]) .post-entry,
-html:not(.dark) .page,
-html:not([data-theme="dark"]) .page,
-html:not(.dark) .archive-post,
-html:not([data-theme="dark"]) .archive-post,
-html:not(.dark) .post-single,
-html:not([data-theme="dark"]) .post-single {
-  background: var(--entry) !important;
-  border: 1px solid var(--tertiary) !important;
-  border-radius: 14px;
+/* DARK VARIABLES — media-query fallback when no classes are present */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg-950:#050b15;
+    --bg-900:#081120;
+    --bg-850:#0b1a2e;
+    --bg-800:#0e223b;
+
+    --ink-50:#e8f2fb;
+    --ink-100:#d4e6f6;
+    --ink-300:#aac7e3;
+
+    --brand-900:#60A3D9;
+    --brand-700:#7cb6e1;
+    --brand-500:#BFD7ED;
+
+    --theme:var(--ink-50);
+    --entry:var(--bg-900);
+    --primary:var(--brand-900);
+    --secondary:var(--ink-300);
+    --tertiary:#16324a;
+    --content:var(--ink-50);
+    --hljs-bg:var(--bg-850);
+    --code-text:var(--ink-100);
+    --code-chip-bg:#0e2238;
+
+    --focus-ring:var(--brand-900);
+  }
 }
 
-/* Lists, archives, taxonomy pages */
-html:not(.dark) .list,
-html:not([data-theme="dark"]) .list,
-html:not(.dark) .archive,
-html:not([data-theme="dark"]) .archive {
-  background: var(--bg-50) !important;
+/* HARD SURFACE NORMALIZATION (prevents template-to-template drift) */
+html.dark body,
+body.dark,
+:root.dark body,
+:root[data-theme="dark"] body,
+html[data-theme="dark"] body,
+body[data-theme="dark"],
+@media (prefers-color-scheme: dark){
+  body{ background:var(--bg-900) !important; color:var(--theme) !important; }
 }
 
-/* Code blocks and inline code */
-html:not(.dark) .post-content pre { background: var(--hljs-bg) !important; }
-html:not(.dark) .post-content code:not(pre code){
-  background: var(--code-chip-bg) !important;
-  color: var(--code-text) !important;
-  padding: .08rem .3rem; border-radius: 6px;
+.post-entry,.page,.archive-post,.post-single{
+  background:var(--entry) !important;
+  border:1px solid var(--tertiary) !important;
+  border-radius:14px;
 }
 
-/* Links */
-html:not(.dark) .post-content a{ color: var(--primary) !important; text-decoration-thickness:.09em; text-underline-offset:.16em; }
-html:not(.dark) .post-content a:hover{ color:#005e93 !important; } /* Royal darkened */
+/* CODE + LINKS */
+.post-content pre{ background:var(--hljs-bg) !important; }
+.post-content pre code{ font-size:.95rem; color:var(--code-text) !important; }
+.post-content code:not(pre code){
+  background:var(--code-chip-bg) !important;
+  color:var(--code-text) !important;
+  padding:.08rem .3rem; border-radius:6px;
+}
 
-/* Typography */
-html,body{ font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,sans-serif; }
-pre,code,kbd,samp{ font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace; }
-.post-content pre code{ font-size:.95rem; }
+.post-content a{ color:var(--primary) !important; text-decoration-thickness:.09em; text-underline-offset:.16em; }
+.post-content a:hover{ color:var(--brand-700) !important; }
 
-/* Optional width */
-:root{ --content-width: 860px; }
+/* TYPOGRAPHY + WIDTH */
+html,body{ font-family:var(--font-sans); }
+pre,code,kbd,samp{ font-family:var(--font-mono); }
+:root{ --content-width:860px; }
+:focus-visible{ outline:2px solid var(--focus-ring); outline-offset:2px; }
 
