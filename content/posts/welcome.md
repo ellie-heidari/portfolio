@@ -1,11 +1,6 @@
 ---
-title: "Hello, PaperMod"
-draft: true 
-date: 2025-10-15
-tags: ["meta"]
-categories: ["articles"]
-summary: "Structure of this site."
+title: "Welcome"
+date: 2025-10-18
+summary: "Site structure."
 ---
-
-Purpose, structure, and where to find projects and CV.
-
+Replace with your first post.

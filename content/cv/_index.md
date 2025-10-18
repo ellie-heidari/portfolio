@@ -1,4 +1,4 @@
 ---
 title: "CV"
 ---
-[Download CV](/portfolio/cv/alireza_heidari_lebenslauf.pdf)
+[Download CV](/portfolio/cv/ellie_heidari_cv.pdf)

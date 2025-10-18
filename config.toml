@@ -34,3 +34,24 @@ theme = "PaperMod"
 
 # leave menus/links as-is (no color settings here)
 
+
+[menu]
+  [[menu.main]]
+    name = "Projects"
+    url  = "projects/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Articles"
+    url  = "posts/"
+    weight = 20
+
+  [[menu.main]]
+    name = "About"
+    url  = "about/"
+    weight = 30
+
+  [[menu.main]]
+    name = "CV"
+    url  = "cv/"
+    weight = 40
