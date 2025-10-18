@@ -53,43 +53,36 @@ Seed colors (brand):
   --code-chip-bg: #ecf4fb;
 }
 
-/* Dark theme (from dark → light; keeps hue chain aligned to seeds) */
-.dark {
-  /* Neutral/surfaces scale (dark → lighter) */
-  --bg-950: #06121f;     /* near-black with blue bias */
-  --bg-900: #08192a;
-  --bg-850: #0a223a;     /* code-friendly plate */
-  --bg-800: #0c2a46;
-  --bg-750: #0f3152;     /* ≈ Navy lifted */
-  --bg-700: #123a60;
+/* Dark theme — corrected */
+:root.dark {
+  /* Surfaces (dark → lighter) */
+  --bg-950: #040a14;
+  --bg-900: #060f1d;   /* site background */
+  --bg-850: #0a1626;   /* code/page plate */
+  --bg-800: #0d1c30;   /* raised cards */
 
-  /* Text scale (high contrast, blue-tinted white) */
-  --ink-50:  #eaf3fb;
-  --ink-100: #d9e9f7;
-  --ink-300: #b6d2ea;
-  --ink-500: #8fb3cf;    /* muted text */
+  /* Text */
+  --ink-50:  #e8f2fb;  /* main text */
+  --ink-100: #d4e6f6;  /* code text */
+  --ink-300: #aac7e3;  /* muted text */
 
-  /* Brand/accents tuned for dark */
-  --brand-900: #60A3D9;  /* use Grotto as primary for better contrast */
-  --brand-700: #7cb6e1;  /* hover */
-  --brand-500: #BFD7ED;  /* subtle lines/badges */
-  --brand-300: #2d6fa7;  /* pressed/active */
+  /* Brand (Speckled Eggs tuned for dark) */
+  --brand-900: #60A3D9; /* primary accent */
+  --brand-700: #7cb6e1; /* hover/active */
+  --brand-500: #BFD7ED; /* subtle lines/badges */
 
-  /* PaperMod token mapping (dark) */
-  --theme:        var(--ink-50);    /* main text */
-  --entry:        var(--bg-900);    /* card/page bg */
-  --primary:      var(--brand-900); /* links, accents */
-  --secondary:    var(--ink-500);   /* muted text */
-  --tertiary:     #1a3e63;          /* borders/dividers (Royal softened) */
-  --content:      var(--ink-50);    /* body text */
-  --hljs-bg:      var(--bg-850);    /* code block bg */
-  --code-text:    var(--ink-100);   /* code fg */
+  /* PaperMod token mapping */
+  --theme:      var(--ink-50);   /* main text */
+  --entry:      var(--bg-900);   /* card/page background */
+  --primary:    var(--brand-900);
+  --secondary:  var(--ink-300);  /* muted text */
+  --tertiary:   #16324a;         /* borders/dividers */
+  --content:    var(--ink-50);
+  --hljs-bg:    var(--bg-850);   /* code block background */
+  --code-text:  var(--ink-100);
+  --code-chip-bg: #0e2238;
 
-  /* Inline code chip */
-  --code-chip-bg: #112a44;
-
-  /* Focus/selection */
-  --focus-ring:   var(--brand-900);
+  --focus-ring: var(--brand-900);
 }
 
 /* Application (shared) */
